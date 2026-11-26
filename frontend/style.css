@@ -576,27 +576,51 @@ body {
 
 /* RESPONSIVE DESIGN */
 
+/* TABLET AND MOBILE */
+
 @media (max-width: 768px) {
 
+    /* NAVBAR */
+
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 12px;
-        padding: 14px 5%;
+        padding: 12px 4%;
     }
 
     .navbar .logo img {
+        width: 110px;
+        height: auto;
         object-position: center;
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
         justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        white-space: nowrap;
     }
 
     .nav-btn {
-        display: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 15px;
+        font-size: 13px;
+        white-space: nowrap;
     }
+
+
+    /* HERO */
 
     .hero {
         flex-direction: column;
@@ -622,6 +646,9 @@ body {
         font-size: 90px;
     }
 
+
+    /* ABOUT AND CONTACT */
+
     .about-content,
     .contact-container {
         flex-direction: column;
@@ -632,29 +659,65 @@ body {
         width: 100%;
     }
 
+
+    /* SKILLS */
+
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    /* PROJECTS */
 
     .projects-container {
         grid-template-columns: 1fr;
     }
 
+
+    /* FOOTER */
+
     .footer-socials {
         gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .footer-logo img {
         width: 130px;
         height: 60px;
     }
+
 }
+
+
+/* SMALL MOBILE SCREENS */
 
 @media (max-width: 480px) {
 
-    .skills-container {
-        grid-template-columns: 1fr;
+    .navbar {
+        padding: 12px 4%;
+        gap: 10px;
     }
+
+    .navbar .logo img {
+        width: 90px;
+    }
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+
+    /* HERO */
 
     .hero h1 {
         font-size: 32px;
@@ -662,7 +725,29 @@ body {
 
     .hero-buttons {
         flex-direction: column;
+        align-items: center;
     }
+
+    .avatar-circle {
+        width: 190px;
+        height: 190px;
+        font-size: 75px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    .footer-socials {
+        gap: 14px;
+    }
+
 }
 
 /* SCROLL ANIMATIONS */
